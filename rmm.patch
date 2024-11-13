@@ -1,0 +1,13 @@
+diff --git a/include/rmm/cuda_stream_view.hpp b/include/rmm/cuda_stream_view.hpp
+index 2aaa17a5..6e5336ca 100644
+--- a/include/rmm/cuda_stream_view.hpp
++++ b/include/rmm/cuda_stream_view.hpp
+@@ -22,7 +22,7 @@
+ #include <cuda/stream_ref>
+ #include <cuda_runtime_api.h>
+ 
+-#include <atomic>
++#include <cuda/std/atomic>
+ #include <cstddef>
+ #include <cstdint>
+ 

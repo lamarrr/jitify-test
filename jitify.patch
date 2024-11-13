@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ac74b57..7f98a0a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.9)
+ project(jitify LANGUAGES CXX CUDA)
+ 
+ # C++ compiler options.
+-set (CMAKE_CXX_STANDARD 11)
+-set (CMAKE_CUDA_STANDARD 11)  # Doesn't work?
++set (CMAKE_CXX_STANDARD 17)
++set (CMAKE_CUDA_STANDARD 17)  # Doesn't work?
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ")
+ if (MSVC)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX")

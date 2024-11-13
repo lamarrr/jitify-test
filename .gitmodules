@@ -4,6 +4,8 @@
 [submodule "rmm"]
 	path = rmm
 	url = https://github.com/rapidsai/rmm
+	branch = branch-24.12
 [submodule "jitify"]
 	path = jitify
 	url = https://github.com/rapidsai/jitify/
+	branch = jitify2
