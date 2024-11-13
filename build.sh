@@ -12,6 +12,7 @@ git submodule update --init --recursive
 
 cd ${SOURCE_DIR}/jitify
 git apply ${SOURCE_DIR}/jitify.patch
+git apply ${SOURCE_DIR}/jitify_1.patch
 
 cd ${SOURCE_DIR}/rmm
 git apply ${SOURCE_DIR}/rmm.patch

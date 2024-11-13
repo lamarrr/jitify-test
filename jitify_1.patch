@@ -1,0 +1,12 @@
+diff --git a/jitify2.hpp b/jitify2.hpp
+index ede9fbf..0817252 100644
+--- a/jitify2.hpp
++++ b/jitify2.hpp
+@@ -52,6 +52,7 @@
+ #include <string>
+ #include <unordered_map>
+ #include <vector>
++#include <cinttypes>
+ 
+ #if __cplusplus >= 201703L
+ #include <string_view>
