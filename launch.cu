@@ -1,3 +1,10 @@
+
+#define JITIFY_PRINT_INSTANTIATION 1
+#define JITIFY_PRINT_SOURCE 1
+#define JITIFY_PRINT_LOG 1
+#define JITIFY_PRINT_PTX 1
+#define JITIFY_PRINT_LINKER_LOG 1
+#define JITIFY_PRINT_LAUNCH 1
 #include "jit_kernel.cu.jit.hpp"
 
 #include "jitify2.hpp"
@@ -16,8 +23,8 @@ int main() {
   auto cache = std::make_unique<jitify2::ProgramCache<>>(
       10'000, *jit_kernel_cu_jit, nullptr, "/tmp", 100'000);
 
-      int64_t s = 0;
-      float * a = nullptr,* b = nullptr;
+  int64_t s = 0;
+  float *a = nullptr, *b = nullptr;
 
   cache->get_kernel(kernel_name, {}, {{"operation.hpp", src}}, {"-arch=sm_."})
       ->configure_1d_max_occupancy(0, 0, nullptr, nullptr)

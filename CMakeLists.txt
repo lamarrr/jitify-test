@@ -32,7 +32,7 @@ set(GENERATED_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/generated)
 add_executable(jitify_preprocess "${jitify_SOURCE_DIR}/jitify2_preprocess.cpp")
 
 target_compile_definitions(jitify_preprocess PRIVATE "_FILE_OFFSET_BITS=64")
-target_link_libraries(jitify_preprocess PUBLIC ${CMAKE_DL_LIBS} CCCL::libcudacxx CUDA::cudart_static)
+target_link_libraries(jitify_preprocess PUBLIC ${CMAKE_DL_LIBS} CCCL::libcudacxx CUDA::cudart)
 
 # Take a list of files to JIT-compile and run them through jitify_preprocess.
 function(jit_preprocess_files)
@@ -102,3 +102,4 @@ add_executable(launch launch.cu)
 add_dependencies(launch jitify_preprocess_run)
 target_include_directories(launch PUBLIC ${GENERATED_INCLUDE_DIR}
                                          ${jitify_SOURCE_DIR})
+target_link_libraries(launch PUBLIC CCCL::libcudacxx CUDA::cudart)
