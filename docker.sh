@@ -1,0 +1,1 @@
+ docker run --privileged --mount type=bind,src=$HOME/cudf,dst=/home/coder/cudf,consistency=consistent --mount type=bind,src=$HOME/.config,dst=/home/coder/.config,consistency=consistent --gpus=all --name ecstatic-fast-compile -it -d rapidsai/devcontainers:25.06-cpp-cuda12.8-ubuntu22.04
